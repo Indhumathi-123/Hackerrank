@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read the input number (e.g., 2)
+        int N = sc.nextInt(); 
+        
+        // Loop from 1 up to 10
+        for (int i = 1; i <= 10; i++) {
+            int result = N * i;
+            
+            // Print each line: "N x i = result"
+            // %d is for the integer, %n adds a new line
+            System.out.printf("%d x %d = %d%n", N, i, result);
+        }
+        
+        sc.close();
+    }
+}
+
