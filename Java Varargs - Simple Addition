@@ -1,0 +1,25 @@
+
+// Class Add to handle variable number of integer arguments
+class Add {
+    // The add method uses varargs (int... args) to accept any number of integers
+    public void add(int... numbers) {
+        int sum = 0;
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < numbers.length; i++) {
+            sum += numbers[i];
+            sb.append(numbers[i]);
+            
+            // Append '+' only if it's not the last element
+            if (i < numbers.length - 1) {
+                sb.append("+");
+            }
+        }
+        
+        // Append '=' and the final calculated sum
+        sb.append("=").append(sum);
+        
+        // Print the final formatted string
+        System.out.println(sb.toString());
+    }
+}
